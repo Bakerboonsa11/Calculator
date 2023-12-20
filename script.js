@@ -1,7 +1,11 @@
 
     // second 
+const delete_part = document.querySelectorAll(".delete_part")
+const form_iteam = document.querySelectorAll(".form_iteam");
+const curent_display = document.querySelector(".current_display");
+const result_diplay= document.querySelector(".result");
 
-const form = document.querySelector(".form");
+
 
 function sum(arg) {
   return arg[0] + arg[2];
@@ -64,27 +68,53 @@ function processArrayInGroups(array) {
 
   return result;
 }
+form_iteam.forEach(function(element){
+    element.addEventListener("click", function (e) {
+        let current_value = e.target.value;
 
-form.addEventListener("click", function (e) {
-    let current_value = e.target.value;
-
-    if (current_value !== "=") {
-      if (!isNaN(parseInt(current_value))) {
-        if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
-          array[array.length - 1] += current_value;
-        } else {
-          array.push(current_value);
+    
+        if (current_value !== "=") {
+          if (!isNaN(parseInt(current_value))) {
+            if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
+              array[array.length - 1] += current_value;
+            } else {
+              array.push(current_value);
+            }
+          } else {
+            array.push(current_value);
+          }
         }
-      } else {
-        array.push(current_value);
-      }
-    }
 
-    if (current_value === "=") {
-      console.log(array);
-      console.log(processArrayInGroups(array));
-    }
-  });
+        curent_display.textContent = array.join('');
+        if (current_value === "=") {
+          console.log(array);
+          curent_display.textContent=""
+         let  final_result = processArrayInGroups(array);
+         result_diplay.textContent=final_result;
+         
+         
+        }
+
+      });
+});
+
 console.table(array)
+// adding the event lieasner to the clear button
+// console.log(delete_part)
+delete_part.forEach(function(element){
+    element.addEventListener("click",function(e){
+        // remove all the element of the array
+        if(e.target.value==="c"){
+          array.splice(0);
+          curent_display.textContent='';
+        }
+        else{
+          array.pop();
+          curent_display.textContent = array.join('');
+        }
+        
+    })
+})
+
 
 
