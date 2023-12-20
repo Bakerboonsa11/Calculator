@@ -104,7 +104,7 @@ console.table(array)
 delete_part.forEach(function(element){
     element.addEventListener("click",function(e){
         // remove all the element of the array
-        if(e.target.value==="c"){
+        if(e.target.value==="AC"){
           array.splice(0);
           curent_display.textContent='';
         }

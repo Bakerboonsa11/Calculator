@@ -5,62 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-
-<div class="all_container">
+<div class="container all_container ">
+<div class=" row text-center ">
     
-        <p>CALCULATOR DESIGN</p>
+        <p class="col-8 text">CALCULATOR DESIGN</p>
    
-    <div class="container">
+    <div class="col-4 calculator_part">
         <div class="content_disply">
               <p class="current_display">p1</p>
               <p class="result">p2</p>
         </div>
-        <form action="#" class="form">
-             <div>
-                <input type="button" class="delete_part" placeholder="c" value=c>
-                <input type="button" placeholder="/" class="form_iteam" value="/">
-                <input type="button" placeholder="*" class="form_iteam" value="*">
-                <input type="button" placeholder="x" class="delete_part" value="<">
+        <form action="#" class="form row ">
+            <div  class="col-12 only_calc_part">
+                <div  class="row">
+                    <input type="button" class="delete_part col color_1 exeption" placeholder="" value="AC">
+                    <input type="button" placeholder="/" class="form_iteam col color_1 exeption " value="/">
+                    <input type="button" placeholder="*" class="form_iteam col color_1 exeption " value="*">
+                    <input type="button" placeholder="x" class=" delete_part col  color_two" value="DEL">
+                </div>
+                <div class="row">
+                    <input type="button"class="form_iteam  col color_1"   value="7">
+                    <input type="button" class="form_iteam col color_1" value="8">
+                    <input type="button" class="form_iteam col color_1" value="9">
+                    <input type="button" class="form_iteam  col  color_two" value="-">
+                </div>
+                <div class="row">
+                    <input type="button"class="form_iteam col color_1"  value="4" >
+                    <input type="button" class="form_iteam col color_1" value="5">
+                    <input type="button" class="form_iteam col color_1" value="6">
+                    <input type="button" class="form_iteam col  color_two" value="+">
+                </div>
+                <div class="row">
+                    <input type="button" placeholder="1"class="form_iteam col color_1"  value="1" >
+                    <input type="button" placeholder="2"class="form_iteam col color_1"  value="2" >
+                    <input type="button" placeholder="3" class="form_iteam col color_1" value="3" > 
+                    <input type="button" placeholder="3" class="form_iteam col  color_two" value="s" > 
+                   
+                </div>
+                <div class="row">
+                    <input type="button" placeholder="1" class="form_iteam col color_1" value="." >
+                    <input type="button" placeholder="2" class="form_iteam col color_1" value="0" >
+                    <input type="button" placeholder="3" class="form_iteam col color_1" value="%" > 
+                    <input type="button" placeholder="=" class=" form_iteam col color_two " value="=">
+                   
+                    
+                </div>
+            </div>
+            <!-- <div class="col-2">
+                <input type="button" placeholder="x" class=" form_iteam " value="<">
+                <input type="button" class="form_iteam " value="-">
+                <input type="button" class="form_iteam " value="+">
+                <input type="button" placeholder="=" class="form_iteam " value="=">
+               
+            </div> -->
 
-             </div>     
-             <div>
-                <input type="button"class="form_iteam"   value="7">
-                <input type="button" class="form_iteam" value="8">
-                <input type="button" class="form_iteam" value="9">
-                <input type="button" class="form_iteam" value="-">
-             </div> 
-             <div>
-                <input type="button"class="form_iteam"  value="4" >
-                <input type="button" class="form_iteam" value="5">
-                <input type="button" class="form_iteam" value="6">
-                <input type="button" class="form_iteam" value="+">
-             </div>
-              
-             <div class="last_flex">
-                   <div>
 
-                     <div>
-                         <input type="button" placeholder="1"class="form_iteam"  value="1" >
-                         <input type="button" placeholder="2"class="form_iteam"  value="2" >
-                          <input type="button" placeholder="3" class="form_iteam" value="3" >        
-                     </div> 
-                     <div>
-                        <input type="button" placeholder="1" class="form_iteam" value="." >
-                         <input type="button" placeholder="2" class="form_iteam" value="0" >
-                          <input type="button" placeholder="3" class="form_iteam" value="%" >   
-                     </div>
 
-                   </div>
-                   <div>
-                    <input type="button" placeholder="=" class="form_iteam" value="=">
-                   </div>
-             </div>
-            
         </form>
     </div>
 </div>
+</div>
+<!-- 
+             <div class="row each_line_conatiner">
+                <input type="button" class="delete_part col" placeholder="c" value=c>
+                <input type="button" placeholder="/" class="form_iteam col " value="/">
+                <input type="button" placeholder="*" class="form_iteam col " value="*">
+                <input type="button" placeholder="x" class="delete_part col " value="<">
+
+             </div>     
+             <div class="row each_line_conatiner">
+                <input type="button"class="form_iteam  col "   value="7">
+                <input type="button" class="form_iteam col " value="8">
+                <input type="button" class="form_iteam col " value="9">
+                <input type="button" class="form_iteam col " value="-">
+             </div> 
+             <div class="row each_line_conatiner" >
+                <input type="button"class="form_iteam col "  value="4" >
+                <input type="button" class="form_iteam col " value="5">
+                <input type="button" class="form_iteam col " value="6">
+                <input type="button" class="form_iteam col " value="+">
+             </div> -->
+              
+             <!-- <div class=" each_line_conatiner" >
+                   <div class="container"> -->
+
+                     <!-- <div  class="row">
+                         <input type="button" placeholder="1"class="form_iteam col "  value="1" >
+                         <input type="button" placeholder="2"class="form_iteam col "  value="2" >
+                          <input type="button" placeholder="3" class="form_iteam col " value="3" >        
+                     </div> 
+                     <div class="row">
+                        <input type="button" placeholder="1" class="form_iteam col " value="." >
+                         <input type="button" placeholder="2" class="form_iteam col " value="0" >
+                          <input type="button" placeholder="3" class="form_iteam col " value="%" >   
+                     </div>
+                     <div class="row">
+                        <input type="button" placeholder="=" class="form_iteam col " value="=">
+                       </div> -->
+
+                   <!-- </div>
+                  
+             </div> -->
+            
+ 
 
   
    
@@ -69,5 +122,30 @@
 
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+    </div>
+  </div> -->

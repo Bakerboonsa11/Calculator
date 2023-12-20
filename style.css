@@ -1,34 +1,77 @@
-/* html{
+ html{
     font-size: 62.5%;
 }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 20rem;
+    padding-top: 3rem; 
+    padding-bottom: 3rem;
+    background:blue !important; ; 
 }
 
 
 
-.all_container{
-    background-color: blue;
-    max-width: 90rem ;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50rem;
-    border: 1px solid red;
+
+
+.text{
+    /* background-color: blue; */
+    /* align-items: center; */
+    align-self: center;
+    font-size: 3rem;
+    font-family: 'Rubik Doodle Shadow', cursive;
+    font-weight: 700;
+    letter-spacing: 7px;
 }
-.container{
-    border: 3px solid yellowgreen;
-    width: 20rem;
+.calculator_part{
+    background-color:#272829;
+    /* background-color: #852bb6; */
+    min-height: 47rem;
+    border: 7px solid #fff;
+    border-radius: 10px;
 }
+.form{
+    /* background-color: blue; */
+    /* max-height: 90rem; */
+    /* height: 30rem; */
+}
+
+
 .content_disply{
-    height: 14rem;
-    background-color: aqua;
+    padding: 5.5rem;
+    /* background-color: #fff; */
+    
 }
-.last_flex{
-    display: flex;
-    align-items: center;
-} */
+
+.form_iteam{
+    /* padding-bottom: 3rem 0rem; */
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+    
+    /* border: none; */
+    /* border-radius: 50%; */
+    /* background-color: gold; */
+}
+.delete_part{
+    /* padding-bottom: 3rem 0rem; */
+    width: 5rem;
+    margin: 0.5rem;
+    height: 5rem;
+}
+.color_1{
+ background-color: #282829;
+ font-size: 3rem;
+ font-weight: 700;
+ color: grey;
+}
+.color_two{
+    background-color: #852bb6 ;
+    color: #fff;
+    font-size: 3rem;
+ font-weight: 700;
+}
+.exeption{
+    background-color: #852bb6;
+    color: #fff;
+}
