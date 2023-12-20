@@ -6,13 +6,27 @@ body{
     padding: 0;
     box-sizing: border-box;
     padding-top: 3rem; 
-    padding-bottom: 3rem;
-    background:blue !important; ; 
+    /* padding-bottom: 3rem; */
+    /* background:linear-gradient() !important; ;  */
+    
+        background: linear-gradient(to bottom right,#46026b, #893ab4) ;
+      
 }
 
 
 
-
+.result{
+    font-size: 4rem;
+    color: grey;
+    font-weight: 600;
+    text-align: end;
+}
+.current_display{
+    font-size: 4rem;
+    color: grey;
+    font-weight: 600;
+    text-align: end;
+}
 
 .text{
     /* background-color: blue; */
@@ -22,6 +36,7 @@ body{
     font-family: 'Rubik Doodle Shadow', cursive;
     font-weight: 700;
     letter-spacing: 7px;
+    color: #fff;
 }
 .calculator_part{
     background-color:#272829;

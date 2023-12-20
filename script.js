@@ -70,6 +70,7 @@ function processArrayInGroups(array) {
 }
 form_iteam.forEach(function(element){
     element.addEventListener("click", function (e) {
+      e.preventDefault()
         let current_value = e.target.value;
 
     
@@ -88,7 +89,7 @@ form_iteam.forEach(function(element){
         curent_display.textContent = array.join('');
         if (current_value === "=") {
           console.log(array);
-          curent_display.textContent=""
+          curent_display.textContent="0.00";
          let  final_result = processArrayInGroups(array);
          result_diplay.textContent=final_result;
          
@@ -103,14 +104,17 @@ console.table(array)
 // console.log(delete_part)
 delete_part.forEach(function(element){
     element.addEventListener("click",function(e){
+      e.preventDefault()
         // remove all the element of the array
         if(e.target.value==="AC"){
           array.splice(0);
-          curent_display.textContent='';
+          curent_display.textContent="0.00";
+          result_diplay.textContent="0.00";
         }
         else{
           array.pop();
           curent_display.textContent = array.join('');
+          
         }
         
     })
