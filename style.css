@@ -1,0 +1,34 @@
+/* html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 20rem;
+}
+
+
+
+.all_container{
+    background-color: blue;
+    max-width: 90rem ;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50rem;
+    border: 1px solid red;
+}
+.container{
+    border: 3px solid yellowgreen;
+    width: 20rem;
+}
+.content_disply{
+    height: 14rem;
+    background-color: aqua;
+}
+.last_flex{
+    display: flex;
+    align-items: center;
+} */
