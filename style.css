@@ -8,8 +8,9 @@ body{
     padding-top: 3rem; 
     /* padding-bottom: 3rem; */
     /* background:linear-gradient() !important; ;  */
+    height: 70vh;
     
-        background: linear-gradient(to bottom right,#46026b, #893ab4) ;
+        background: linear-gradient(to right,#46026b, #893ab4) ;
       
 }
 
