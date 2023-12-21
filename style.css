@@ -18,6 +18,8 @@ body{
 
 
 
+
+
 .result{
     font-size: 4rem;
     color: grey;
@@ -52,30 +54,24 @@ body{
     border-radius: 10px;
     width: 3rem;
 }
-.form{
- /* width: 20rem; */
-}
+
 
 
 .content_disply{
     padding: 5.5rem;
-    /* background-color: #fff; */
     
 }
 
 .form_iteam{
-    /* padding-bottom: 3rem 0rem; */
+   
     width: 5rem;
     height: 5rem;
     margin: 0.5rem;
-    
-    /* border: none; */
-    /* border-radius: 50%; */
-    /* background-color: gold; */
+
 }
 
 .delete_part{
-    /* padding-bottom: 3rem 0rem; */
+   
     width: 5rem;
     margin: 0.5rem;
     height: 5rem;
@@ -86,17 +82,34 @@ body{
  font-weight: 700;
  color: grey;
 }
+.color_1:hover{
+    background-color:#750E21;
+    font-size: 3rem;
+    font-weight: 700;
+    color: grey;
+   }
 .color_two{
-    /* background-color: #852bb6 ; */
     background-color: #750E21;
     color: #fff;
     font-size: 3rem;
  font-weight: 700;
 }
+.color_two:hover{
+    background-color:#282829 ;
+    color: #fff;
+    font-size: 3rem;
+ font-weight: 700;
+}
+
 .exeption{
     /* background-color: #852bb6; */
     background-color: #750E21;
     color: #fff;
+}
+.exeption:hover{
+    /* background-color: #852bb6; */
+    background-color:#272829;
+    /* color: #fff; */
 }
 .all_container{
    height: 40rem;
