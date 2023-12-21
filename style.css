@@ -42,14 +42,13 @@ body{
 .calculator_part{
     background-color:#272829;
     /* background-color: #852bb6; */
-    min-height: 47rem;
+    /* min-height: 47rem; */
     border: 7px solid #fff;
     border-radius: 10px;
+    width: 3rem;
 }
 .form{
-    /* background-color: blue; */
-    /* max-height: 90rem; */
-    /* height: 30rem; */
+ /* width: 20rem; */
 }
 
 
@@ -69,6 +68,7 @@ body{
     /* border-radius: 50%; */
     /* background-color: gold; */
 }
+
 .delete_part{
     /* padding-bottom: 3rem 0rem; */
     width: 5rem;
@@ -90,4 +90,8 @@ body{
 .exeption{
     background-color: #852bb6;
     color: #fff;
+}
+.all_container{
+   height: 40rem;
+   /* max-width: 70rem; */
 }
