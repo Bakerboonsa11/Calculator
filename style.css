@@ -10,7 +10,9 @@ body{
     /* background:linear-gradient() !important; ;  */
     height: 70vh;
     
-        background: linear-gradient(to right,#46026b, #893ab4) ;
+        /* background: linear-gradient(to right,#46026b, #893ab4) ; */
+        background: linear-gradient(to right,#191919,#750E21) ;
+      
       
 }
 
@@ -27,6 +29,9 @@ body{
     color: grey;
     font-weight: 600;
     text-align: end;
+    width: 100%;
+    /* overflow-x: hidden; */
+    
 }
 
 .text{
@@ -82,16 +87,28 @@ body{
  color: grey;
 }
 .color_two{
-    background-color: #852bb6 ;
+    /* background-color: #852bb6 ; */
+    background-color: #750E21;
     color: #fff;
     font-size: 3rem;
  font-weight: 700;
 }
 .exeption{
-    background-color: #852bb6;
+    /* background-color: #852bb6; */
+    background-color: #750E21;
     color: #fff;
 }
 .all_container{
    height: 40rem;
    /* max-width: 70rem; */
+}
+
+/* .content_disply{
+    background-color: red;
+} */
+
+.borderrl{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
 }
