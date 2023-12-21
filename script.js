@@ -4,31 +4,68 @@ const delete_part = document.querySelectorAll(".delete_part")
 const form_iteam = document.querySelectorAll(".form_iteam");
 const curent_display = document.querySelector(".current_display");
 const result_diplay= document.querySelector(".result");
+const sqrt_btn= document.querySelector(".sqrt");
+console.log( typeof sqrt_btn.value)
+
+          let result;
+          let array = [];
 
 
+function to_array (e)  {
+  e.preventDefault()
+    let current_value = e.target.value;
 
-function sum(arg) {
-  return arg[0] + arg[2];
-}
 
-function subtract(arg) {
-  return arg[0] - arg[2];
-}
+    if (current_value !== "=") {
+      if (!isNaN(parseInt(current_value))) {
+        if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
+          array[array.length - 1] += current_value;
+        } else {
+          array.push(current_value);
+        }
+      } else {
+        array.push(current_value);
+      }
+    }
 
-function divide(arg) {
-  return arg[0] / arg[2];
-}
+    curent_display.textContent = array.join('');
+    if (current_value === "=") {
+      console.log(array);
+      curent_display.textContent="0.00";
+     let  final_result = processArrayInGroups(array);
+     result_diplay.textContent=final_result;
+     
+     
+    }
 
-function multiply(arg) {
-  return arg[0] * arg[2];
-}
+  }
 
-function modulo(arg) {
-  return arg[0] % arg[2];
-}
 
-let result;
-let array = [];
+      function sum(arg) {
+        return arg[0] + arg[2];
+      }
+
+      function subtract(arg) {
+        return arg[0] - arg[2];
+      }
+
+      function divide(arg) {
+        return arg[0] / arg[2];
+      }
+
+      function multiply(arg) {
+        return arg[0] * arg[2];
+      }
+
+      function modulo(arg) {
+        return arg[0] % arg[2];
+      }
+      function sqrts(arg){
+        // Math.sqrt(number);
+        return Math.sqrt(result);
+      }
+
+     
 
 function processArrayInGroups(array) {
 //  setupping the initial three numbers
@@ -64,39 +101,14 @@ function processArrayInGroups(array) {
     } else if (group[1] === "%") {
       result = modulo(group);
     }
+    
   }
 
   return result;
 }
 form_iteam.forEach(function(element){
-    element.addEventListener("click", function (e) {
-      e.preventDefault()
-        let current_value = e.target.value;
-
-    
-        if (current_value !== "=") {
-          if (!isNaN(parseInt(current_value))) {
-            if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
-              array[array.length - 1] += current_value;
-            } else {
-              array.push(current_value);
-            }
-          } else {
-            array.push(current_value);
-          }
-        }
-
-        curent_display.textContent = array.join('');
-        if (current_value === "=") {
-          console.log(array);
-          curent_display.textContent="0.00";
-         let  final_result = processArrayInGroups(array);
-         result_diplay.textContent=final_result;
-         
-         
-        }
-
-      });
+    element.addEventListener("click", to_array);
+   
 });
 
 console.table(array)
