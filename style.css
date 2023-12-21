@@ -24,15 +24,24 @@ body{
     font-size: 4rem;
     color: grey;
     font-weight: 600;
-    text-align: end;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 12px;
+    min-width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
 }
 .current_display{
     font-size: 4rem;
     color: grey;
     font-weight: 600;
-    text-align: end;
-    width: 100%;
-    /* overflow-x: hidden; */
+    text-align: center;
+    min-width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    /* background-color: yellowgreen; */
+    border: 1px solid grey;
+    border-radius: 12px;
     
 }
 
@@ -58,16 +67,25 @@ body{
 
 
 .content_disply{
-    padding: 5.5rem;
+    padding: 5.5rem 1rem;
+    /* background-color: aqua; */
+    /* height: 2rem; */
     
 }
 
-.form_iteam{
-   
+
+.form_iteam {
+      width: 5rem;
+        height: 5rem;
+        margin: 0.5rem;
+
+}
+.sqrt{
     width: 5rem;
     height: 5rem;
     margin: 0.5rem;
-
+    border: .2px solid white;
+    border-radius: 12px;
 }
 
 .delete_part{
@@ -83,10 +101,15 @@ body{
  color: grey;
 }
 .color_1:hover{
-    background-color:#750E21;
+    background-color:#646262;
     font-size: 3rem;
     font-weight: 700;
     color: grey;
+    
+   }
+   input{
+    border: .2px solid white;
+    border-radius: 12px;
    }
 .color_two{
     background-color: #750E21;
@@ -124,4 +147,7 @@ body{
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 
+}
+.only_calc_part{
+    text-align: center;
 }

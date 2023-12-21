@@ -1,17 +1,14 @@
 
-//  
-
-// second
 const delete_part = document.querySelectorAll(".delete_part");
 const form_iteam = document.querySelectorAll(".form_iteam");
 const curent_display = document.querySelector(".current_display");
 const result_diplay = document.querySelector(".result");
 const sqrt_btn = document.querySelector(".sqrt");
+
 console.log(typeof sqrt_btn.value);
 
 let result;
 let array = [];
-// declaare variable for last result
 let final_result;
 
 function to_array(e) {
@@ -113,7 +110,7 @@ delete_part.forEach(function (element) {
       array.pop();
       curent_display.textContent = array.join("");
       if (!isNaN(parseInt(array[array.length - 1]))) {
-        // array.pop()
+        
         
         final_result = processArrayInGroups(array);
         result_diplay.textContent = final_result;
@@ -133,4 +130,16 @@ delete_part.forEach(function (element) {
       result_diplay.textContent = "0.00";
     }
   });
+});
+
+sqrt_btn.addEventListener("click",function(e){
+      
+      if(array.length===1){
+         sqrt_result=Math.sqrt(parseInt(array[0]))
+         result_diplay.textContent=sqrt_result;
+      }else{
+        result=processArrayInGroups(array);
+        sqrt_result=Math.sqrt(result)
+        result_diplay.textContent=sqrt_result;
+      }
 });
