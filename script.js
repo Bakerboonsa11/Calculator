@@ -14,16 +14,32 @@ let final_result;
 function to_array(e) {
   e.preventDefault();
   let current_value = e.target.value;
-
+  
   if (current_value !== "=") {
     if (!isNaN(parseInt(current_value))) {
+     
       if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
         array[array.length - 1] += current_value;
       } else {
+
         array.push(current_value);
+       
       }
-    } else {
-      array.push(current_value);
+    } 
+    else {
+          if(current_value===".") {
+            console.table(array)
+            console.log(array[array.length-1]= array[array.length-1]+current_value);
+        
+            console.log(array)
+          
+            
+          
+          }
+          else{array.push(current_value);}
+   
+   
+      // 
     }
   }
 
@@ -62,8 +78,8 @@ function sqrts(arg) {
 function processArrayInGroups(array) {
   // set up the initial three numbers
   const initialGroup = array.slice(0, 3);
-  initialGroup[0] = parseInt(initialGroup[0]);
-  initialGroup[2] = parseInt(initialGroup[2]);
+  initialGroup[0] = parseFloat(initialGroup[0]);
+  initialGroup[2] = parseFloat(initialGroup[2]);
   if (initialGroup[1] === "+") {
     result = sum(initialGroup);
   } else if (initialGroup[1] === "-") {
@@ -79,8 +95,8 @@ function processArrayInGroups(array) {
   for (let i = 3; i < array.length; i += 2) {
     const group = array.slice(i, i + 2);
     group.unshift(result);
-    group[0] = parseInt(group[0]);
-    group[2] = parseInt(group[2]);
+    group[0] = parseFloat(group[0]);
+    group[2] = parseFloat(group[2]);
 
     if (group[1] === "+") {
       result = sum(group);
@@ -141,7 +157,7 @@ sqrt_btn.addEventListener("click",function(e){
         result=processArrayInGroups(array);
         alert(result)
         sqrt_result=Math.sqrt(result)
-        alert(sqrt_result)
+        // alert(sqrt_result)
         result_diplay.textContent=sqrt_result;
       }
 });
