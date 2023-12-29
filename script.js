@@ -45,7 +45,7 @@ function to_array(e) {
 
   curent_display.textContent = array.join("");
   if (current_value === "=") {
-    curent_display.textContent = "0.00";
+    // curent_display.textContent = "0.00";
     final_result = processArrayInGroups(array);
     result_diplay.textContent = final_result;
   }
@@ -124,19 +124,36 @@ delete_part.forEach(function (element) {
     // remove the last element from the curent_display
     if (e.target.value === "DEL") {
       array.pop();
-      curent_display.textContent = array.join("");
-      if (!isNaN(parseInt(array[array.length - 1]))) {
+      if(array.length===0){
+        curent_display.textContent="0.00"
+        result_diplay.textContent="0.00"
+      } else{
+        curent_display.textContent = array.join("");
+        result_diplay.textContent=processArrayInGroups(array);
         
-        
-        final_result = processArrayInGroups(array);
-        result_diplay.textContent = final_result;
       }
-      else if(isNaN(parseInt(array[array.length - 1]))){
-         if(array.length===1){
-           result_diplay.textContent===array[1];
-         } else{
+     
+      if (!isNaN(parseInt(array[array.length - 1]))) {
+        if(array.length===1){
+          //  curent_display.textContent=
+           result_diplay.textContent=array[0];
+         }
+         else{
           final_result = processArrayInGroups(array);
           result_diplay.textContent = final_result;
+         }
+     
+      }
+      else if(isNaN(parseInt(array[array.length - 1]))){
+       
+
+         if(array.length===2){
+          //  curent_display.textContent=
+           result_diplay.textContent=array[0];
+         } else{
+          // array.pop()
+           
+          result_diplay.textContent = processArrayInGroups(array);
          }
         
       }
