@@ -175,3 +175,8 @@ body{
     }
 
 }
+@media (max-width: 348px) {
+   .text{
+    opacity: 0;
+   }
+  }
