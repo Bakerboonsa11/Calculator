@@ -54,6 +54,7 @@ body{
     font-weight: 700;
     letter-spacing: 7px;
     color: #fff;
+    animation: animate 5s ease-in;
 }
 .calculator_part{
     background-color:#272829;
@@ -150,4 +151,27 @@ body{
 }
 .only_calc_part{
     text-align: center;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(5%);
+        opacity: 75%;
+    }
+    25%{
+        transform: translateX(10%%);
+        opacity: 50%;
+    }
+    50%{
+        transform: translateX(15%%);
+        opacity: 25%;
+    }
+    75%{
+        transform: translateX(25%%);
+        opacity: 10%;
+    }
+    100%{
+        transform: translateX(35%);
+        opacity: 0%;
+    }
+
 }
