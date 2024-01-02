@@ -4,6 +4,7 @@ const form_iteam = document.querySelectorAll(".form_iteam");
 const curent_display = document.querySelector(".current_display");
 const result_diplay = document.querySelector(".result");
 const sqrt_btn = document.querySelector(".sqrt");
+const root = document.documentElement;
 
 console.log(typeof sqrt_btn.value);
 
@@ -16,6 +17,10 @@ function to_array(e) {
   let current_value = e.target.value;
   
   if (current_value !== "=") {
+
+      
+
+
     if (!isNaN(parseInt(current_value))) {
      
       if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
@@ -46,6 +51,9 @@ function to_array(e) {
   curent_display.textContent = array.join("");
   if (current_value === "=") {
     // curent_display.textContent = "0.00";
+    root.classList.toggle("result_color");
+    root.classList.toggle("result_color2");
+    
     final_result = processArrayInGroups(array);
     result_diplay.textContent = final_result;
   }
