@@ -55,7 +55,7 @@ body{
     font-weight: 700;
     letter-spacing: 7px;
     color: #fff;
-    animation: animate 5s ease-in;
+    animation:var(--animate-value);
 }
 .calculator_part{
     background-color:#272829;
@@ -141,9 +141,6 @@ body{
    /* max-width: 70rem; */
 }
 
-/* .content_disply{
-    background-color: red;
-} */
 
 .borderrl{
     border-top-right-radius: 30px;
@@ -184,8 +181,10 @@ body{
   :root{
     --bg-color:linear-gradient(to right,#191919,#750E21) ;
     --btn-color:#750E21;
+    --animate-value:animate 5s ease-in;
   }
   :root.result_color{
     --bg-color:linear-gradient(to right,#d4d3d3,#0e5475) ; 
     --btn-color:#0e5475;
+    --animate-value:animate 15s ease-in;
   }
