@@ -179,12 +179,13 @@ body{
    }
   }
   :root{
-    --bg-color:linear-gradient(to right,#191919,#750E21) ;
-    --btn-color:#750E21;
+    --bg-color:linear-gradient(to right,#d4d3d3,#0e5475) ; 
+    --btn-color:#0e5475;
     --animate-value:animate 5s ease-in;
   }
   :root.result_color{
-    --bg-color:linear-gradient(to right,#d4d3d3,#0e5475) ; 
-    --btn-color:#0e5475;
+    --bg-color:linear-gradient(to right,#191919,#750E21) ;
+    --btn-color:#750E21;
+   
     --animate-value:animate 15s ease-in;
   }
