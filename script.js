@@ -7,52 +7,49 @@ const sqrt_btn = document.querySelector(".sqrt");
 const root = document.documentElement;
 
 
-console.log(typeof sqrt_btn.value);
 
-let result;
-let array = [];
-let final_result;
+// initiate a global variables
+      let result;
+      let array = [];
+      let final_result;
+
 
 function to_array(e) {
-  e.preventDefault();
-  let current_value = e.target.value;
+      e.preventDefault();
+     let current_value = e.target.value;
   
   if (current_value !== "=") {
 
-      
-
-
-    if (!isNaN(parseInt(current_value))) {
-     
-      if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
-        array[array.length - 1] += current_value;
-      } else {
-
-        array.push(current_value);
-       
-      }
-    } 
-    else {
-          if(current_value===".") {
-            console.table(array)
-            console.log(array[array.length-1]= array[array.length-1]+current_value);
+        if (!isNaN(parseInt(current_value))) {
         
-            console.log(array)
-          
-            
-          
+            if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
+              array[array.length - 1] += current_value;
+            } 
+              else {
+
+                array.push(current_value);
+              
+              }
+        } 
+          else {
+                if(current_value===".") {
+
+                array[array.length-1]= array[array.length-1]+current_value; 
+
+                }
+                  else{
+                    array.push(current_value);
+                  }
+        
+     
           }
-          else{array.push(current_value);}
-   
-   
-      // 
-    }
   }
 
-  curent_display.placeholder= array.join("");
+  // display the content of the array
+curent_display.placeholder= array.join("");
 
   if (current_value === "=") {
-    // curent_display.textContent = "0.00";
+    
     root.classList.toggle("result_color");
     root.classList.toggle("result_color2");
     
