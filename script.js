@@ -15,48 +15,50 @@ const root = document.documentElement;
 
 
 function to_array(e) {
-      e.preventDefault();
-     let current_value = e.target.value;
-  
-  if (current_value !== "=") {
+          e.preventDefault();
+        let current_value = e.target.value;
+      
+      if (current_value !== "=") {
 
-        if (!isNaN(parseInt(current_value))) {
-        
-            if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
-              array[array.length - 1] += current_value;
+            if (!isNaN(parseInt(current_value))) {
+            
+                if (array.length > 0 && !isNaN(parseInt(array[array.length - 1]))) {
+                  array[array.length - 1] += current_value;
+                } 
+                  else {
+
+                    array.push(current_value);
+                  
+                  }
             } 
               else {
+                    if(current_value===".") {
 
-                array.push(current_value);
-              
-              }
-        } 
-          else {
-                if(current_value===".") {
+                    array[array.length-1]= array[array.length-1]+current_value; 
 
-                array[array.length-1]= array[array.length-1]+current_value; 
-
-                }
-                  else{
-                    array.push(current_value);
-                  }
+                    }
+                      else{
+                        array.push(current_value);
+                      }
+            
         
-     
-          }
-  }
+              }
+      }
 
-  // display the content of the array
-curent_display.placeholder= array.join("");
+        // display the content of the array
+      curent_display.placeholder= array.join("");
 
-  if (current_value === "=") {
-    
-    root.classList.toggle("result_color");
-    root.classList.toggle("result_color2");
-    
-    final_result = processArrayInGroups(array);
-    result_diplay.placeholder = final_result;
-  }
+        if (current_value === "=") {
+          
+          root.classList.toggle("result_color");
+          root.classList.toggle("result_color2");
+          
+          final_result = processArrayInGroups(array);
+          result_diplay.placeholder = final_result;
+        }
 }
+
+// the action part functions 
 
 function sum(arg) {
   return arg[0] + arg[2];
@@ -82,6 +84,7 @@ function sqrts(arg) {
   return Math.sqrt(result);
 }
 
+
 function processArrayInGroups(array) {
   // set up the initial three numbers
   const initialGroup = array.slice(0, 3);
@@ -98,6 +101,7 @@ function processArrayInGroups(array) {
   } else if (initialGroup[1] === "%") {
     result = modulo(initialGroup);
   }
+
   // start of the left array elements
   for (let i = 3; i < array.length; i += 2) {
     const group = array.slice(i, i + 2);
@@ -128,7 +132,9 @@ form_iteam.forEach(function (element) {
 delete_part.forEach(function (element) {
   element.addEventListener("click", function (e) {
     e.preventDefault();
+
     // remove the last element from the curent_display
+
     if (e.target.value === "DEL") {
       array.pop();
       if(array.length===0){
@@ -155,10 +161,10 @@ delete_part.forEach(function (element) {
        
 
          if(array.length===2){
-          //  curent_display.textContent=
+        
            result_diplay.placeholder=array[0];
          } else{
-          // array.pop()
+        
            
           result_diplay.placeholder = processArrayInGroups(array);
          }
