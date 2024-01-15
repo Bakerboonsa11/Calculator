@@ -180,9 +180,7 @@ sqrt_btn.addEventListener("click",function(e){
          result_diplay.textContent=sqrt_result;
       }else{
         result=processArrayInGroups(array);
-        alert(result)
         sqrt_result=Math.sqrt(result)
-        // alert(sqrt_result)
         result_diplay.textContent=sqrt_result;
       }
 });
