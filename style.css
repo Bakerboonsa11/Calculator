@@ -17,10 +17,6 @@ body{
       
 }
 
-
-
-
-
 .result{
     font-size: 4rem;
     color: grey;
@@ -28,21 +24,26 @@ body{
     text-align: center;
     border: 1px solid grey;
     border-radius: 12px;
-    min-width: 100%;
-    overflow: auto;
-    word-wrap: break-word;
+    max-width: 100%;
+    margin-top: 20px;
+    background-color:#272829;
+   
 }
 .current_display{
     font-size: 4rem;
     color: grey;
     font-weight: 600;
     text-align: center;
-    min-width: 100%;
+    /* min-width: 100%; */
+    display: flex;
+     justify-content: center;
+    max-width: 100%;
     overflow: auto;
     word-wrap: break-word;
-    /* background-color: yellowgreen; */
+    background-color:#272829;
     border: 1px solid grey;
     border-radius: 12px;
+
     
 }
 

@@ -6,6 +6,7 @@ const result_diplay = document.querySelector(".result");
 const sqrt_btn = document.querySelector(".sqrt");
 const root = document.documentElement;
 
+
 console.log(typeof sqrt_btn.value);
 
 let result;
@@ -48,14 +49,15 @@ function to_array(e) {
     }
   }
 
-  curent_display.textContent = array.join("");
+  curent_display.placeholder= array.join("");
+
   if (current_value === "=") {
     // curent_display.textContent = "0.00";
     root.classList.toggle("result_color");
     root.classList.toggle("result_color2");
     
     final_result = processArrayInGroups(array);
-    result_diplay.textContent = final_result;
+    result_diplay.placeholder = final_result;
   }
 }
 
@@ -133,11 +135,11 @@ delete_part.forEach(function (element) {
     if (e.target.value === "DEL") {
       array.pop();
       if(array.length===0){
-        curent_display.textContent="0.00"
-        result_diplay.textContent="0.00"
+        curent_display.placeholder ="0.00"
+        result_diplay.placeholder="0.00"
       } else{
-        curent_display.textContent = array.join("");
-        result_diplay.textContent=processArrayInGroups(array);
+        curent_display.placeholder = array.join("");
+        result_diplay.placeholder=processArrayInGroups(array);
         
       }
      
@@ -148,7 +150,7 @@ delete_part.forEach(function (element) {
          }
          else{
           final_result = processArrayInGroups(array);
-          result_diplay.textContent = final_result;
+          result_diplay.placeholder = final_result;
          }
      
       }
@@ -157,18 +159,18 @@ delete_part.forEach(function (element) {
 
          if(array.length===2){
           //  curent_display.textContent=
-           result_diplay.textContent=array[0];
+           result_diplay.placeholder=array[0];
          } else{
           // array.pop()
            
-          result_diplay.textContent = processArrayInGroups(array);
+          result_diplay.placeholder = processArrayInGroups(array);
          }
         
       }
     } else if (e.target.value === "AC") {
       array.splice(0);
-      curent_display.textContent = "0.00";
-      result_diplay.textContent = "0.00";
+      curent_display.placeholder = "0.00";
+      result_diplay.placeholder= "0.00";
     }
   });
 });
@@ -177,10 +179,10 @@ sqrt_btn.addEventListener("click",function(e){
       
       if(array.length===1){
          sqrt_result=Math.sqrt(parseInt(array[0]))
-         result_diplay.textContent=sqrt_result;
+         result_diplay.placeholder=sqrt_result;
       }else{
         result=processArrayInGroups(array);
         sqrt_result=Math.sqrt(result)
-        result_diplay.textContent=sqrt_result;
+        result_diplay.placeholder= Math.floor(parseInt(sqrt_result));
       }
 });
