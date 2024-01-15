@@ -178,6 +178,8 @@ body{
     opacity: 0;
    }
   }
+
+
   :root{
     --bg-color:linear-gradient(to right,#d4d3d3,#0e5475) ; 
     --btn-color:#0e5475;
