@@ -2,10 +2,10 @@
 
 ### technologies  used 
 
-html
-css 
-java script 
-bootstrap
+### html
+### css 
+### java script 
+### bootstrap
 
 
 <img src="animate.png">
