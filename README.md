@@ -1,12 +1,12 @@
 # Calculator
 
-## language used 
-  ### HTML
-  ### CSS
-  ### JAVA SCRIPT 
-  ### BOOTSTRAP FRAMEWORK
+### technologies  used 
 
-# Testimonial 
+html
+css 
+java script 
+bootstrap
+
 
 <img src="animate.png">
 
