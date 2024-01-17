@@ -127,7 +127,9 @@ function processArrayInGroups(array) {
 
 form_iteam.forEach(function (element) {
   element.addEventListener("click", to_array);
+
 });
+
 
 delete_part.forEach(function (element) {
   element.addEventListener("click", function (e) {
@@ -186,6 +188,6 @@ sqrt_btn.addEventListener("click",function(e){
       }else{
         result=processArrayInGroups(array);
         sqrt_result=Math.sqrt(result)
-        result_diplay.placeholder= Math.floor(parseInt(sqrt_result));
+        result_diplay.placeholder= sqrt_result;
       }
 });
