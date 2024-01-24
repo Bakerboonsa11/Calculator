@@ -77,7 +77,7 @@ function multiply(arg) {
 }
 
 function modulo(arg) {
-  return arg[0] % arg[2];
+  return arg[0]%arg[2];
 }
 
 function sqrts(arg) {
